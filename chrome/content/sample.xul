@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<script>function showHello(){alert('hello!');}</script>
+<script type="application/x-javascript" src="sampleOverlay.js"/>
 <hbox id="nav-bar-customization-target">
     <button id="appButton" label="App" onclick="showHello();"/>
 </hbox>
