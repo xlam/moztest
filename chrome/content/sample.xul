@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<hbox id="nav-bar-customization-target">
+    <statusbarpanel id="my-panel" label="Hello, World"/>
+    <toolbarbutton id="appButton" label="App" onclick="showHello();"/>
+</hbox>
+</overlay>
+
+<script>
+function showHello(){
+    alert('hello!');
+}
+</script>
