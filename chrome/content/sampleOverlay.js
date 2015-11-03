@@ -1,7 +1,7 @@
-function showHello() {
-    alert('hello!');
-}
+function runApp() {
 
-function do1() {
-    $("#myDiv").css("border","3px solid red");
+	alert("Test!");
+	xlamTest();
+
+    //$("#myDiv").css("border","3px solid red");
 }
