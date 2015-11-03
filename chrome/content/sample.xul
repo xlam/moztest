@@ -1,10 +1,19 @@
 <?xml version="1.0"?>
 
-<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<overlay id="sample-browser-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <script type="application/x-javascript" src="chrome://sample/content/sampleOverlay.js"/>
 <script type="application/x-javascript" src="chrome://sample/content/lib/jquery-1.7.1.min.js"/>
 <script type="application/x-javascript" src="chrome://sample/content/lib/xlam-lib.js"/>
 <hbox id="nav-bar-customization-target">
-    <button id="appButton" label="App" onclick="runApp();"/>
+<menu id="sample-app-menu" label="App">
+	<menupopup>
+		<menuitem id="sample-menuitem-run"
+				  label="Run"
+				  oncommand="XULXlam.runApp();" />
+		<menuitem id="sample-menuitem-test"
+				  label="Test"
+				  oncommand="XULXlamLib.test();" />
+	</menupopup>
+</menu>
 </hbox>
 </overlay>

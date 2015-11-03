@@ -1,7 +1,8 @@
-function runApp() {
-
-	alert("Test!");
-	xlamTest();
-
-    //$("#myDiv").css("border","3px solid red");
+if ("undefined" == typeof XULXlam) {
+	var XULXlam = {};
 }
+
+XULXlam.runApp = function() {
+	alert("runApp();");
+	XULXlamLib.test();
+};

@@ -1,3 +1,7 @@
-function xlamTest() {
-	alert("Xlam Test!");
+if ("undefined" == typeof XULXlamLib) {
+	var XULXlamLib = {};
 }
+
+XULXlamLib.test = function() {
+	alert("test();");
+};
