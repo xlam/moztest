@@ -18,7 +18,8 @@ num2.txt = '35';
 w('num2 + \' \' + num2.txt', num2 + ' ' + num2.txt);
 
 function Person(namestr) {
-    var name = namestr;
+    
+    var name = namestr || 'Unknown';
 
     this.setName = function(namestr) {
         name = namestr;
