@@ -26,9 +26,9 @@
 	w("num2 + \" \" + num2.txt", num2 + " " + num2.txt);
 
         function Person(namestr) {
-            this.name = namestr;
+            name = namestr;
             _getName = function() {
-                return this.name;
+                return name;
             };
 
             this.setName = function(namestr) {
@@ -36,11 +36,13 @@
             };
 
             this.getName = function() {
-                return _getName();
+                //return _getName();
+                return name;
             };
         }
 
         var me = new Person("Serg");
+        w("me.getName()", me.getName());
         w("me.name 1", me.name);
         me.name = "Kus";
         w("me.name 2", me.name);
