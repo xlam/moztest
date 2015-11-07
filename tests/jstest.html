@@ -28,6 +28,37 @@
 	w(num2);
 	num2.txt = "35";
 	w(num2 + " " + num2.txt);
+
+        function Person(namestr) {
+            this.name = namestr;
+            _getName = function() {
+                return this.name;
+            };
+
+            this.setName = function(namestr) {
+                this.name = namestr;
+            };
+
+            this.getName = function() {
+                return _getName();
+            };
+        }
+
+        var me = new Person("Serg");
+        w(me.name);
+        me.name = "Kus";
+        w(me.name);
+        me.name = function() {
+            return me.getName();
+        };
+        w(me.name());
+        me.name = me.getName();
+        w(me.name);
+        w(me.getName());
+        me.setName("Kus");
+        w(me.name);
+        w(me.getName());
+
 </script>
 </body>
 </html>
