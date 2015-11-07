@@ -26,36 +26,37 @@
 	w("num2 + \" \" + num2.txt", num2 + " " + num2.txt);
 
         function Person(namestr) {
-            name = namestr;
-            _getName = function() {
-                return name;
-            };
+            var name = namestr;
 
             this.setName = function(namestr) {
-                this.name = namestr;
+                name = namestr;
             };
 
             this.getName = function() {
-                //return _getName();
                 return name;
             };
         }
-
+ 
+        w("window.name", window.name);
         var me = new Person("Serg");
-        w("me.getName()", me.getName());
         w("me.name 1", me.name);
-        me.name = "Kus";
+        w("me.getName()", me.getName());
+        me.name = "xlam";
+        w("window.name", window.name);
         w("me.name 2", me.name);
+        w("me.getName()", me.getName());
         me.name = function() {
             return me.getName();
         };
+        w("me.name 2.5", me.name);
         w("me.name()", me.name());
         me.name = me.getName();
         w("me.name 3", me.name);
         w("me.getName()", me.getName());
-        me.setName("Kus");
+        me.setName("Hrun");
         w("me.name 4", me.name);
         w("me.getName()", me.getName());
+        w("window.name", window.name);
 </script>
 </body>
 </html>
