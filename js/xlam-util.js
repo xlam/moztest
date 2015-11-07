@@ -1,8 +1,10 @@
-var element = document.getElementById("output");
+'use strict';
+
+var element = document.getElementById('output');
 
 function w(msg, data) {
     element.innerHTML = element.innerHTML +
-                        "[" + msg + "] " +
-                        "<strong>" + data + "</strong><br>";
+                        '[' + msg + '] ' +
+                        '<strong>' + data + '</strong><br>';
 }
 
