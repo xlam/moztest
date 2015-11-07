@@ -2,32 +2,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JS Tests</title>
 </head>
 <body>
 <pre id="output"></pre>
+<script type="text/javascript" src="../js/xlam-util.js"></script>
 <script type="text/javascript">
-	var element = document.getElementById("output");
-	
-	function w(data) {
-		element.innerHTML = element.innerHTML + data + "<br>";
-	}
-
 	var message = "Hello!";
-	w("parseInt message: " + parseInt(message));
-	w("parseInt 10: " + parseInt(10));
-	w("parseInt '50': " + parseInt("50"));
+	w("parseInt message", parseInt(message));
+	w("parseInt 10", parseInt(10));
+	w("parseInt '50'", parseInt("50"));
 	
 	var num = 10;
-	w(num.toString());
-	w("20".toString());
-	w(parseInt("30").toString(2));
-	w(num.toString(2));
+	w("num.toString()", num.toString());
+	w("\"20\".toString()", "20".toString());
+	w("parseInt(\"30\").toString(2)", parseInt("30").toString(2));
+	w("num.toString(2)", num.toString(2));
 	//w(null.toString()); //error
 
 	var num2 = new Number(25);
-	w(num2);
+	w("num2", num2);
 	num2.txt = "35";
-	w(num2 + " " + num2.txt);
+	w("num2 + \" \" + num2.txt", num2 + " " + num2.txt);
 
         function Person(namestr) {
             this.name = namestr;
@@ -45,20 +41,19 @@
         }
 
         var me = new Person("Serg");
-        w(me.name);
+        w("me.name 1", me.name);
         me.name = "Kus";
-        w(me.name);
+        w("me.name 2", me.name);
         me.name = function() {
             return me.getName();
         };
-        w(me.name());
+        w("me.name()", me.name());
         me.name = me.getName();
-        w(me.name);
-        w(me.getName());
+        w("me.name 3", me.name);
+        w("me.getName()", me.getName());
         me.setName("Kus");
-        w(me.name);
-        w(me.getName());
-
+        w("me.name 4", me.name);
+        w("me.getName()", me.getName());
 </script>
 </body>
 </html>
