@@ -1,7 +1,10 @@
-if ("undefined" == typeof XULXlamLib) {
-	var XULXlamLib = {};
+/*globals XULXlamLib, alert */
+/*jshint -W079 */
+
+if ("undefined" === XULXlamLib) {
+    var XULXlamLib = {};
 }
 
-XULXlamLib.test = function() {
-	alert("test();");
+XULXlamLib.test = function () {
+    alert("test();");
 };

@@ -2,32 +2,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JS Tests</title>
 </head>
 <body>
 <pre id="output"></pre>
-<script type="text/javascript">
-	var element = document.getElementById("output");
-	
-	function w(data) {
-		element.innerHTML = element.innerHTML + data + "<br>";
-	}
-
-	var message = "Hello!";
-	w("parseInt message: " + parseInt(message));
-	w("parseInt 10: " + parseInt(10));
-	w("parseInt '50': " + parseInt("50"));
-	
-	var num = 10;
-	w(num.toString());
-	w("20".toString());
-	w(parseInt("30").toString(2));
-	w(num.toString(2));
-	//w(null.toString()); //error
-
-	var num2 = new Number(25);
-	w(num2);
-	num2.txt = "35";
-	w(num2 + " " + num2.txt);
-</script>
+<script type="text/javascript" src="../js/xlam-util.js"></script>
+<script type="text/javascript" src="jstest.js"></script>
 </body>
 </html>
