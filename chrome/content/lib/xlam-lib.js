@@ -1,4 +1,7 @@
-if ("undefined" === typeof XULXlamLib) {
+/*globals XULXlamLib, alert */
+/*jshint -W079 */
+
+if ("undefined" === XULXlamLib) {
     var XULXlamLib = {};
 }
 
