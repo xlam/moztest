@@ -1,4 +1,8 @@
-if ('undefined' === typeof XULXlam) {
+/*globals XULXlam, XULXlamLib, alert */
+/*jshint -W079 */
+/*jslint node: true */
+
+if ('undefined' === XULXlam) {
     var XULXlam = {};
 }
 
