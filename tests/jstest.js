@@ -42,7 +42,7 @@ me.name = 'xlam';
 w('window.name', window.name);
 w('me.name 2', me.name);
 w('me.getName()', me.getName());
-me.name = function() {
+me.name = function () {
     return me.getName();
 };
 w('me.name 2.5', me.name);

@@ -1,3 +1,5 @@
+/*globals document */
+
 var element = document.getElementById('output');
 
 function w(msg, data) {
