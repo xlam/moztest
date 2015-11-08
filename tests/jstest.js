@@ -1,3 +1,8 @@
+/*jshint strict:false */
+/*jshint -W117 */
+/*jslint node: true */
+/*globals w */
+
 'use strict';
 
 var message = 'Hello!';
@@ -12,7 +17,7 @@ w('parseInt(\'30\').toString(2)', parseInt('30').toString(2));
 w('num.toString(2)', num.toString(2));
 //w(null.toString()); //error
 
-var num2 = new Number(25);
+var num2 = Number('25');
 w('num2', num2);
 num2.txt = '35';
 w('num2 + \' \' + num2.txt', num2 + ' ' + num2.txt);

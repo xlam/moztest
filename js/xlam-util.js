@@ -1,5 +1,3 @@
-'use strict';
-
 var element = document.getElementById('output');
 
 function w(msg, data) {

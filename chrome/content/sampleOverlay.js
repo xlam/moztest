@@ -1,8 +1,8 @@
-if ("undefined" == typeof XULXlam) {
-	var XULXlam = {};
+if ('undefined' === typeof XULXlam) {
+    var XULXlam = {};
 }
 
-XULXlam.runApp = function() {
-	alert("runApp();");
-	XULXlamLib.test();
+XULXlam.runApp = function () {
+    alert('runApp()');
+    XULXlamLib.test();
 };
