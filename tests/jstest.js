@@ -82,12 +82,12 @@ function Person2(namestr) {
     };
 }
 
-function Person3() {
+function Person3(name, age, job) {
+    this.name = name || 'Unknown';
+    this.age = age || 'Unknown';
+    this.job = job || 'Unknown';
 }
 
-Person3.prototype.name = "Nicholas";
-Person3.prototype.age = 29;
-Person3.prototype.job = "Software Engineer";
 Person3.prototype.sayName = function () {
     alert(this.name);
 };
