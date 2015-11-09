@@ -1,9 +1,9 @@
+'use strict';
+
 /*jshint strict:false */
 /*jshint -W117 */
 /*jslint node: true */
 /*globals w, window */
-
-'use strict';
 
 var message = 'Hello!';
 w('parseInt message', parseInt(message, 10));
@@ -45,7 +45,7 @@ w('me.getName()', me.getName());
 me.name = function () {
     return me.getName();
 };
-w('me.name 2.5', me.name);
+//w('me.name 2.5', me.name);
 w('me.name()', me.name());
 me.name = me.getName();
 w('me.name 3', me.name);
@@ -54,3 +54,47 @@ me.setName('Hrun');
 w('me.name 4', me.name);
 w('me.getName()', me.getName());
 w('window.name', window.name);
+
+var f1 = function (num) {
+    return num;
+}
+
+var f2 = function (num) {
+    return num + 100;
+}
+
+f1 = f2;
+
+w("f1(500)", f1(500));
+
+function Person2(namestr) {
+
+    var name = namestr || 'Unknown';
+
+    this.setName = function (namestr) {
+        name = namestr;
+    };
+
+    this.getName = function () {
+        return name;
+    };
+}
+
+    function Person3(){
+    }
+    
+    Person3.prototype.name = "Nicholas";
+    Person3.prototype.age = 29;
+    Person3.prototype.job = "Software Engineer";
+    Person3.prototype.sayName = function(){
+        alert(this.name);
+    };
+    
+    var person1 = new Person3();
+    var person2 = new Person3();
+    
+    person1.name = "Greg";
+    w('person1.name', person1.name);   //"Greg" – from instance
+    w('person2.name', person2.name);   //"Nicholas" – from prototype
+    w('Object.getPrototypeOf(person1).name', Object.getPrototypeOf(person1).name);
+    
