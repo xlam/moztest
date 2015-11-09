@@ -97,4 +97,6 @@ function Person2(namestr) {
     w('person1.name', person1.name);   //"Greg" – from instance
     w('person2.name', person2.name);   //"Nicholas" – from prototype
     w('Object.getPrototypeOf(person1).name', Object.getPrototypeOf(person1).name);
+    w('person1.constructor', person1.constructor);
+    w('Object.getPrototypeOf(person1).constructor', Object.getPrototypeOf(person1).constructor);
     
