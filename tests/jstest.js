@@ -3,7 +3,7 @@
 /*jshint strict:false */
 /*jshint -W117 */
 /*jslint node: true */
-/*globals w, window */
+/*globals w, window, parseInt */
 
 var message = 'Hello!';
 w('parseInt message', parseInt(message, 10));
@@ -57,11 +57,11 @@ w('window.name', window.name);
 
 var f1 = function (num) {
     return num;
-}
+};
 
 var f2 = function (num) {
     return num + 100;
-}
+};
 
 f1 = f2;
 
@@ -94,8 +94,8 @@ function Person2(namestr) {
     var person2 = new Person3();
     
     person1.name = "Greg";
-    w('person1.name', person1.name);   //"Greg" – from instance
-    w('person2.name', person2.name);   //"Nicholas" – from prototype
+    w('person1.name', person1.name);   //"Greg" from instance
+    w('person2.name', person2.name);   //"Nicholas" from prototype
     w('Object.getPrototypeOf(person1).name', Object.getPrototypeOf(person1).name);
     w('person1.constructor', person1.constructor);
     w('Object.getPrototypeOf(person1).constructor', Object.getPrototypeOf(person1).constructor);
